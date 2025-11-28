@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMD ERP Solutions LLC - Where Tech Meets Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        rmd: {
+                            blue: '#003366', // Deep Blue from logo concept
+                            orange: '#F58220', // Orange from logo concept
+                            light: '#f3f4f6',
+                            dark: '#111827'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for animations and specific tweaks */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="font-sans text-gray-700 antialiased bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-32 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-3">
+                        <img class="h-24 w-auto object-contain" src="RMD_Logo.png" alt="RMD ERP Solutions Logo" onerror="this.onerror=null; this.src='https://placehold.co/200x80?text=RMD+Logo';">
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-600 hover:text-rmd-blue font-medium transition">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-rmd-blue font-medium transition">About Us</a>
+                    <a href="#services" class="text-gray-600 hover:text-rmd-blue font-medium transition">Services</a>
+                    <a href="#industries" class="text-gray-600 hover:text-rmd-blue font-medium transition">Industries</a>
+                    <a href="#contact" class="bg-rmd-orange text-white px-5 py-2.5 rounded-md font-medium hover:bg-orange-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Contact Us</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-rmd-blue focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rmd-blue hover:bg-gray-50 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rmd-blue hover:bg-gray-50 rounded-md">About Us</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rmd-blue hover:bg-gray-50 rounded-md">Services</a>
+                <a href="#industries" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-rmd-blue hover:bg-gray-50 rounded-md">Industries</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-rmd-orange font-bold hover:bg-gray-50 rounded-md">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-br from-slate-900 to-rmd-blue pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Abstract Background Shapes -->
+        <div class="absolute inset-0 opacity-10">
+            <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 fade-in-up">
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-rmd-orange/30 bg-rmd-orange/10 text-rmd-orange text-sm font-semibold mb-6">
+                    <span class="mr-2">🚀</span> Zoho Authorized & Odoo Ready Partner
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    Where Tech Meets <span class="text-rmd-orange">Growth</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    We empower organizations to streamline operations, improve efficiency, and accelerate digital transformation with tailor-made ERP, CRM, and business automation solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contact" class="bg-rmd-orange text-white px-8 py-3.5 rounded-md font-bold text-lg hover:bg-orange-600 transition shadow-lg transform hover:-translate-y-1">
+                        Get a Free Consultation
+                    </a>
+                    <a href="#services" class="bg-transparent border-2 border-white text-white px-8 py-3.5 rounded-md font-bold text-lg hover:bg-white hover:text-rmd-blue transition">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mt-12 lg:mt-0 relative fade-in-up delay-200 hidden lg:block">
+               <!-- <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Data Analytics Dashboard" class="rounded-lg shadow-2xl border-4 border-white/10 transform rotate-2 hover:rotate-0 transition duration-500"> -->
+               <img src="M_hero_banner.png" alt="M_hero_banner" class="rounded-lg shadow-2xl border-4 border-white/10 transform rotate-2 hover:rotate-0 transition duration-500">
+               <!-- Floaters -->
+               <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-xl flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+                    <div class="bg-green-100 p-2 rounded-full text-green-600">
+                        <i data-lucide="check-circle" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500">Efficiency</p>
+                        <p class="font-bold text-gray-900">Increased by 40%</p>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-rmd-orange font-semibold tracking-wide uppercase">About Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Bridging Innovation & Growth
+                </p>
+                <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+                    Combining deep business expertise with the latest technology platforms to provide end-to-end ERP implementation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-gray-600 leading-relaxed">
+                        At <span class="font-bold text-rmd-blue">RMD ERP Solutions LLC</span>, we focus on simplifying complex business processes through unified, cloud-based systems that drive measurable results. We serve clients across the UAE, GCC, and India.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        We work closely with our clients to understand their unique challenges and design digital solutions that improve productivity, collaboration, and decision-making.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-rmd-blue">
+                            <h4 class="font-bold text-gray-900 mb-1">Our Mission</h4>
+                            <p class="text-sm text-gray-600">To bridge innovation and growth through smart technology integration.</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-rmd-orange">
+                            <h4 class="font-bold text-gray-900 mb-1">Our Vision</h4>
+                            <p class="text-sm text-gray-600">Empowering businesses with intelligent technology that simplifies operations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Core Values Cards -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition text-center group">
+                        <div class="w-12 h-12 bg-blue-100 text-rmd-blue rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-rmd-blue group-hover:text-white transition">
+                            <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Innovation</h3>
+                        <p class="text-xs text-gray-500">Leveraging tech to transform businesses.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition text-center group">
+                        <div class="w-12 h-12 bg-orange-100 text-rmd-orange rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-rmd-orange group-hover:text-white transition">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Integrity</h3>
+                        <p class="text-xs text-gray-500">Trust through transparency.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition text-center group">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-600 group-hover:text-white transition">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Excellence</h3>
+                        <p class="text-xs text-gray-500">Delivering quality results.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition text-center group">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-600 group-hover:text-white transition">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">Growth</h3>
+                        <p class="text-xs text-gray-500">Scale sustainably.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-rmd-orange font-semibold tracking-wide uppercase">Our Services</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Comprehensive ERP & CRM Solutions
+                </p>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+                    Whether you need a specific module or a complete digital overhaul, we have the expertise.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Zoho Card -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl border-t-4 border-yellow-400 hover:shadow-2xl transition duration-300">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-yellow-100 p-3 rounded-lg mr-4">
+                                <i data-lucide="layout-grid" class="w-8 h-8 text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Zoho Solutions</h3>
+                                <span class="text-sm font-medium text-yellow-600 bg-yellow-50 px-2 py-0.5 rounded">Authorized Partner</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            We provide complete Zoho ecosystem implementation, customization, and support to suit your exact business needs.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-lucide="users" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span class="text-gray-700"><strong>Zoho CRM:</strong> Customer relationship management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="book-open" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span class="text-gray-700"><strong>Zoho Books:</strong> Accounting & invoicing automation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="kanban-square" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span class="text-gray-700"><strong>Zoho Projects:</strong> Project & HR management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="package" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span class="text-gray-700"><strong>Zoho Inventory:</strong> Inventory control</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="mail" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span class="text-gray-700"><strong>Zoho Workplace:</strong> Productivity tools</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Odoo Card -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl border-t-4 border-purple-600 hover:shadow-2xl transition duration-300">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                                <i data-lucide="layers" class="w-8 h-8 text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Odoo ERP Solutions</h3>
+                                <span class="text-sm font-medium text-purple-600 bg-purple-50 px-2 py-0.5 rounded">Ready Partner</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Smart, modular ERP systems that connect all your business operations in one platform, from legacy upgrades to fresh starts.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i data-lucide="shopping-cart" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span class="text-gray-700"><strong>Sales & Purchase:</strong> Complete management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="warehouse" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span class="text-gray-700"><strong>Inventory:</strong> Warehouse control</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="calculator" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span class="text-gray-700"><strong>Accounting:</strong> Finance & Payroll</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="factory" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span class="text-gray-700"><strong>Manufacturing:</strong> Production planning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-green-500 mr-3 mt-0.5"></i>
+                                <span class="text-gray-700"><strong>HR & Projects:</strong> Field service & HR</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries & Why Choose Us -->
+    <section id="industries" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Industries -->
+            <div class="mb-20">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Industries We Serve</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-rmd-blue hover:text-white transition group">
+                        <i data-lucide="truck" class="w-10 h-10 mb-3 text-rmd-blue group-hover:text-white"></i>
+                        <span class="font-medium text-center">Trading & Distribution</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-rmd-blue hover:text-white transition group">
+                        <i data-lucide="hammer" class="w-10 h-10 mb-3 text-rmd-blue group-hover:text-white"></i>
+                        <span class="font-medium text-center">Manufacturing</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-rmd-blue hover:text-white transition group">
+                        <i data-lucide="building-2" class="w-10 h-10 mb-3 text-rmd-blue group-hover:text-white"></i>
+                        <span class="font-medium text-center">Real Estate</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-rmd-blue hover:text-white transition group">
+                        <i data-lucide="briefcase" class="w-10 h-10 mb-3 text-rmd-blue group-hover:text-white"></i>
+                        <span class="font-medium text-center">Services & Consulting</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-rmd-blue hover:text-white transition group">
+                        <i data-lucide="stethoscope" class="w-10 h-10 mb-3 text-rmd-blue group-hover:text-white"></i>
+                        <span class="font-medium text-center">Healthcare & Education</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="bg-rmd-blue rounded-3xl p-8 md:p-12 text-white overflow-hidden relative">
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-rmd-orange rounded-full opacity-20 blur-3xl"></div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6">Why Choose RMD ERP Solutions?</h2>
+                        <p class="text-blue-100 mb-8 text-lg">
+                            We don’t just implement software—we build scalable ecosystems that drive business success.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-white/10 p-2 rounded-full mr-4">
+                                    <i data-lucide="check" class="w-5 h-5 text-rmd-orange"></i>
+                                </div>
+                                <span>Certified Zoho & Odoo Implementation Partner</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-white/10 p-2 rounded-full mr-4">
+                                    <i data-lucide="check" class="w-5 h-5 text-rmd-orange"></i>
+                                </div>
+                                <span>Expert Consultants & Developers</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-white/10 p-2 rounded-full mr-4">
+                                    <i data-lucide="check" class="w-5 h-5 text-rmd-orange"></i>
+                                </div>
+                                <span>End-to-End Implementation & Support</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-white/10 p-2 rounded-full mr-4">
+                                    <i data-lucide="check" class="w-5 h-5 text-rmd-orange"></i>
+                                </div>
+                                <span>UAE-Based Support Team</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-full flex items-center justify-center">
+                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 w-full max-w-sm">
+                            <h3 class="font-bold text-xl mb-4 text-center">Ready to transform?</h3>
+                            <a href="#contact" class="block w-full bg-white text-rmd-blue font-bold text-center py-3 rounded-lg hover:bg-gray-100 transition">Contact Us Today</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Let’s build your digital future together.</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Reach out to our expert team for a consultation on how we can streamline your business operations.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-rmd-orange"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="font-bold text-gray-900">Office Address</p>
+                                <p class="text-gray-600">Sharjah Media City, UAE</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6 text-rmd-orange"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="font-bold text-gray-900">Email Us</p>
+                                <a href="mailto:miraaj@rmderpsolutions.com" class="block text-rmd-blue hover:underline">miraaj@rmderpsolutions.com</a>
+                                <a href="mailto:swati@rmderpsolutions.com" class="block text-rmd-blue hover:underline">swati@rmderpsolutions.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-rmd-orange"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="font-bold text-gray-900">Business Hours</p>
+                                <p class="text-gray-600">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple Contact Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <form onsubmit="event.preventDefault(); alert('Thank you for contacting RMD ERP Solutions. We will get back to you shortly!');" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md focus:ring-rmd-blue focus:border-rmd-blue" placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md focus:ring-rmd-blue focus:border-rmd-blue" placeholder="john@company.com" required>
+                        </div>
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700">Interested Service</label>
+                            <select id="service" name="service" class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md focus:ring-rmd-blue focus:border-rmd-blue">
+                                <option>Zoho Implementation</option>
+                                <option>Odoo Implementation</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-md focus:ring-rmd-blue focus:border-rmd-blue" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-rmd-orange text-white font-bold py-3 px-4 rounded-md hover:bg-orange-600 transition shadow-md hover:shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0 text-center md:text-left">
+                <p class="text-xl font-bold">RMD ERP Solutions LLC</p>
+                <p class="text-gray-400 text-sm mt-1">Where Tech Meets Growth.</p>
+            </div>
+            <div class="text-gray-400 text-sm">
+                &copy; 2024 RMD ERP Solutions LLC. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
